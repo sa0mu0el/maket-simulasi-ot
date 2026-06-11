@@ -19,9 +19,24 @@ Run:
   python3 modbus_server.py
 """
 
+import sys
 import time
 import threading
-from pyModbusTCP.server import ModbusServer
+
+# Dependency Check for pyModbusTCP
+try:
+    from pyModbusTCP.server import ModbusServer
+except ImportError:
+    print("\n" + "=" * 60)
+    print("❌ ERROR: Modul 'pyModbusTCP' belum terinstall di komputer Debian Anda!")
+    print("=" * 60)
+    print("Untuk menginstallnya, silakan jalankan perintah berikut di terminal Anda:")
+    print("\n    pip3 install pyModbusTCP")
+    print("\nJika pip3 belum terinstall di Debian, install terlebih dahulu dengan:")
+    print("\n    sudo apt update && sudo apt install python3-pip -y")
+    print("    pip3 install pyModbusTCP")
+    print("=" * 60 + "\n")
+    sys.exit(1)
 
 # Configuration
 SERVER_HOST = "0.0.0.0"  # Listen on all local IP addresses including your 192.168.122.151
