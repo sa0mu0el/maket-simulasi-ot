@@ -1,0 +1,6 @@
+{
+  "name": "Simulasi PLTA Interaktif",
+  "description": "Maket simulasi interaktif Pembangkit Listrik Tenaga Air (PLTA) dengan kontrol debit air, animasi aliran air real-time, turbin berputar, dan dashboard parameter listrik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
